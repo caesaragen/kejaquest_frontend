@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { FiSettings } from 'react-icons/fi';
 import { ContextProvider, useContextState } from '@/contexts/ContextProvider'
 import { ThemeSettings, Navbar } from '@/components';
+import { Tooltip } from '@mui/material';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${styles.main} ${currentMode === 'Dark' ? 'dark' : ''}`}>
+      <div className="fixed right-4 bottom-4" style={{zindex:`1000`}}>
+                        <Tooltip title="Settings">
+                            <button onClick={()=> setThemeSettings(true)} 
+                            type='button'
+                            className='text-3xl p-3 hover:drop-shadow-xl hover:bg-light-gray text-white' 
+                            style={{background:currentColor,borderRadius:`50%` }}>
+                                <FiSettings />
+                            </button>
+                        </Tooltip>
+                    </div>
         <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
           <Navbar />
         </div>
