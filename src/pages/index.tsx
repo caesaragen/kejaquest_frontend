@@ -11,6 +11,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const { activeMenu, themeSettings, setThemeSettings, currentColor, currentMode } = useContextState();
+  console.log(currentMode)
   return (
     <>
       <Head>
@@ -19,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${currentMode === 'Dark' ? 'dark' : ''}`}>
+      <main className={`flex flex-col justify-between items-center min-h-screen ${currentMode === 'Dark' ? 'dark' : ''}`}>
       <div className="fixed right-4 bottom-4" style={{zindex:`1000`}}>
                         <Tooltip title="Settings">
                             <button onClick={()=> setThemeSettings(true)} 

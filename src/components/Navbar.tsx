@@ -58,13 +58,13 @@ const Navbar: React.FC = () => {
     }
         , [screenSize, setActiveMenu]);
     return (
-        <div className="flex justify-between relative ">
-            <nav className="w-full bg-transparent shadow">
+        <div className="flex justify-between relative bg-main-bg dark:bg-main-dark-bg ">
+            <nav className="w-full bg-[#f5f5f5] dark:text-gray-200 dark:bg-black shadow">
                 <div className="justify-between px-4 mx-auto md:items-center lg:max-w-full md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
                             <a href="javascript:void(0)">
-                                <h2 className="text-2xl font-bold text-white">LOGO</h2>
+                                <h2 className="text-2xl font-bold dark:text-white">LOGO</h2>
                             </a>
                             <div className="md:hidden">
                                 <button
@@ -110,16 +110,16 @@ const Navbar: React.FC = () => {
                                 }`}
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                                <li className="text-white hover:text-indigo-200">
+                                <li className="dark:text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">Home</a>
                                 </li>
-                                <li className="text-white hover:text-indigo-200">
+                                <li className="dark:text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">Blog</a>
                                 </li>
-                                <li className="text-white hover:text-indigo-200">
+                                <li className="dark:text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">About US</a>
                                 </li>
-                                <li className="text-white hover:text-indigo-200">
+                                <li className="dark:text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">Contact US</a>
                                 </li>
                             </ul>
