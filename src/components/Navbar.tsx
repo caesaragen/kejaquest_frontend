@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
     }
         , [screenSize, setActiveMenu]);
     return (
-        <div className="flex justify-between  md:mx-6 relative w-full">
+        <div className="flex justify-between relative ">
             <nav className="w-full bg-transparent shadow">
                 <div className="justify-between px-4 mx-auto md:items-center lg:max-w-full md:flex md:px-8">
                     <div>
