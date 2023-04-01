@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
         , [screenSize, setActiveMenu]);
     return (
         <div className="flex justify-between relative ">
-            <nav className="w-full  dark:text-gray-200 shadow">
+            <nav className="w-full  dark:text-gray-200">
                 <div className="justify-between px-4 mx-auto md:items-center lg:max-w-full md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -127,16 +127,16 @@ const Navbar: React.FC = () => {
                                 }`}
                         >
                             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-                                <li className="dark:text-white hover:text-indigo-200">
+                                <li className="text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">Home</a>
                                 </li>
-                                <li className="dark:text-white hover:text-indigo-200">
+                                <li className="text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">Blog</a>
                                 </li>
-                                <li className="dark:text-white hover:text-indigo-200">
+                                <li className="text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">About US</a>
                                 </li>
-                                <li className="dark:text-white hover:text-indigo-200">
+                                <li className="text-white hover:text-indigo-200">
                                     <a href="javascript:void(0)">Contact US</a>
                                 </li>
                             </ul>

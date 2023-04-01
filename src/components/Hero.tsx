@@ -18,16 +18,16 @@ const Hero: React.FC = () => {
     {snap.intro && (
       <motion.section className='home' 
       {...slideAnimation('left')}>
-        <motion.header {...slideAnimation('down')}>
+        {/* <motion.header {...slideAnimation('down')}>
           <Image src='/logo.png' width={100} height={100} alt='logo' />
-        </motion.header>
+        </motion.header> */}
         <motion.div className="home-content" {...headContainerAnimation}>
           <h1 className='head-text'>
             LET'S FIND YOUR <br className='hidden'/> NEXT HOME
           </h1>
           </motion.div>
           <motion.div {...headContainerAnimation} className='flex flex-col gap-5'>
-            <p className='max-w-md font-normal text-gray-600'>
+            <p className='max-w-md font-normal text-slate-200'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Voluptatum, quae.
               <strong>

@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { FiSettings } from 'react-icons/fi';
 import { ContextProvider, useContextState } from '@/contexts/ContextProvider'
-import { ThemeSettings, Navbar, Hero } from '@/components';
+import { ThemeSettings, Navbar, Hero, Featured } from '@/components';
 import { Tooltip } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
@@ -41,12 +41,16 @@ export default function Home() {
                             </button>
                         </Tooltip>
                     </div>
-        <div className='fixed md:static bg-hero-pattern  bg-cover bg-center navbar w-full'>
+        <div className='fixed md:static bg-hero-pattern  bg-cover bg-center w-full'>
+          <div className='w-full bg-[#272626] bg-opacity-75 '>
           <Navbar />
           <div className='flex flex-col justify-center items-center w-full'>
           <Hero />
+          <Featured />
         </div>
+          </div>
         </div>
+        {/* <Featured /> */}
         {themeSettings && <ThemeSettings />}
       </main>
     </>

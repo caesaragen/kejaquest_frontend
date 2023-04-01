@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'hero-pattern': "url('/house.jpg')",
+        'hero-pattern': "url('/architecture.jpg')",
         
       }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
