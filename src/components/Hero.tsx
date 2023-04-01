@@ -1,8 +1,43 @@
 import React from 'react'
+import { motion, AnimatePresence } from 'framer-motion';
+import { useSnapshot } from 'valtio';
+import Image from 'next/image';
+
+import {
+    headContainerAnimation,
+    headContentAnimation,
+    headTextAnimation,
+    slideAnimation
+} from '../config/motion'
+import state from '../store';
 
 const Hero: React.FC = () => {
+  const snap = useSnapshot(state);
   return (
-    <div>Hero</div>
+   <AnimatePresence>
+    {snap.intro && (
+      <motion.section className='home bg-hero-pattern bg-cover bg-center dark:bg-gradient-to-b from-gray-700 via-gray-900 to-black' 
+      {...slideAnimation('left')}>
+        <motion.header {...slideAnimation('down')}>
+          <Image src='/logo.png' width={100} height={100} alt='logo' />
+        </motion.header>
+        <motion.div className="home-content" {...headContainerAnimation}>
+          <h1 className='head-text'>
+            LET'S FIND YOUR <br className='xl:bloxk hidden'/> NEXT HOME
+          </h1>
+          </motion.div>
+          <motion.div {...headContainerAnimation} className='flex flex-col gap-5'>
+            <p className='max-w-md font-normal text-gray-600'>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum, quae.
+              <strong>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </strong>
+            </p>
+          </motion.div>
+        </motion.section>
+    )}
+    </AnimatePresence>
   )
 }
 

@@ -7,7 +7,17 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import { Tooltip } from '@mui/material';
 import { useContextState } from '../contexts/ContextProvider';
 import avatar from '../data/avatar.jpg';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useSnapshot } from 'valtio';
 import Image from 'next/image';
+
+import {
+    headContainerAnimation,
+    headContentAnimation,
+    headTextAnimation,
+    slideAnimation
+} from '../config/motion'
+import state from '../store';
 import UserProfile from './UserProfile';
 
 interface Props {
@@ -34,6 +44,7 @@ const NavButton = ({ title, customFunction, icon, color, dotColor }: Props) => {
 const Navbar: React.FC = () => {
     const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick, screenSize, setScreenSize, currentColor } = useContextState();
     const [navbar, setNavbar] = useState(false);
+    const snap = useSnapshot(state);
     useEffect(() => {
         const handleResize = () => {
             setScreenSize(window.innerWidth);
@@ -64,7 +75,13 @@ const Navbar: React.FC = () => {
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
                             <a href="javascript:void(0)">
-                                <h2 className="text-2xl font-bold dark:text-white">LOGO</h2>
+                                {snap.intro && (
+                                    <motion.section className='' {...slideAnimation('left')}>
+                                        <motion.header>
+                                            <Image src='/logo.png' width={70} height={30} alt='logo' />
+                                        </motion.header>
+                                    </motion.section>
+                                )}
                             </a>
                             <div className="md:hidden">
                                 <button

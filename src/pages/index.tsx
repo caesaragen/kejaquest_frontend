@@ -6,6 +6,16 @@ import { FiSettings } from 'react-icons/fi';
 import { ContextProvider, useContextState } from '@/contexts/ContextProvider'
 import { ThemeSettings, Navbar, Hero } from '@/components';
 import { Tooltip } from '@mui/material';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useSnapshot } from 'valtio';
+
+import {
+    headContainerAnimation,
+    headContentAnimation,
+    headTextAnimation,
+    slideAnimation
+} from '../config/motion'
+import state from '../store';
 
 const inter = Inter({ subsets: ['latin'] })
 
