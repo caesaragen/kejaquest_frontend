@@ -34,7 +34,7 @@ import AliceCarousel from 'react-alice-carousel';
 
 const Featured: React.FC = () => {
     return (
-        <div className='flex flex-col items-center gap-5 justify-center w-1/2'>
+        <div className='flex flex-col items-center gap-5 justify-center w-3/4 mb-5'>
             <h2 className='text-3xl font-black text-slate-100'>Featured</h2>
             <Swiper
                 effect={"coverflow"}
@@ -53,7 +53,11 @@ const Featured: React.FC = () => {
                     modifier: 1,
                     slideShadows: true,
                 }}
-                pagination={true}
+                pagination={{
+                    clickable: true,
+                  }}
+                navigation={true}
+                spaceBetween={30}
                 modules={[EffectCoverflow, Pagination, Navigation, Scrollbar, A11y, Autoplay]}
                 className="mySwiper items-center justify-center"
             >
