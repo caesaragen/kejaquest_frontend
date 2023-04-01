@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { FiSettings } from 'react-icons/fi';
 import { ContextProvider, useContextState } from '@/contexts/ContextProvider'
-import { ThemeSettings, Navbar } from '@/components';
+import { ThemeSettings, Navbar, Hero } from '@/components';
 import { Tooltip } from '@mui/material';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`flex flex-col justify-between items-center min-h-screen ${currentMode === 'Dark' ? 'dark' : ''}`}>
+      <main className={`flex flex-col bg-slate-200 dark:bg-black min-h-screen items-center ${currentMode === 'Dark' ? 'dark' : ''}`}>
       <div className="fixed right-4 bottom-4" style={{zindex:`1000`}}>
                         <Tooltip title="Settings">
                             <button onClick={()=> setThemeSettings(true)} 
@@ -34,9 +34,9 @@ export default function Home() {
         <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
           <Navbar />
         </div>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
+        <div className='flex flex-col justify-center items-center w-full'>
+          <Hero />
+        </div>
         {themeSettings && <ThemeSettings />}
       </main>
     </>
