@@ -69,8 +69,8 @@ const Navbar: React.FC = () => {
     }
         , [screenSize, setActiveMenu]);
     return (
-        <div className="flex justify-between relative bg-main-bg dark:bg-main-dark-bg ">
-            <nav className="w-full bg-[#f5f5f5] dark:text-gray-200 dark:bg-black shadow">
+        <div className="flex justify-between relative ">
+            <nav className="w-full  dark:text-gray-200 shadow">
                 <div className="justify-between px-4 mx-auto md:items-center lg:max-w-full md:flex md:px-8">
                     <div>
                         <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
                                 {snap.intro && (
                                     <motion.section className='' {...slideAnimation('left')}>
                                         <motion.header>
-                                            <Image src='/logo.png' width={70} height={30} alt='logo' />
+                                            <Image src='/logos.png' width={100} height={30} alt='logo' className='object-contain dark:bg-transparent' />
                                         </motion.header>
                                     </motion.section>
                                 )}

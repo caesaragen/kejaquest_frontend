@@ -41,11 +41,11 @@ export default function Home() {
                             </button>
                         </Tooltip>
                     </div>
-        <div className='fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full'>
+        <div className='fixed md:static bg-hero-pattern  bg-cover bg-center navbar w-full'>
           <Navbar />
-        </div>
-        <div className='flex flex-col justify-center items-center w-full'>
+          <div className='flex flex-col justify-center items-center w-full'>
           <Hero />
+        </div>
         </div>
         {themeSettings && <ThemeSettings />}
       </main>

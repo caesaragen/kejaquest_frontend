@@ -16,14 +16,14 @@ const Hero: React.FC = () => {
   return (
    <AnimatePresence>
     {snap.intro && (
-      <motion.section className='home bg-hero-pattern bg-cover bg-center dark:bg-gradient-to-b from-gray-700 via-gray-900 to-black' 
+      <motion.section className='home' 
       {...slideAnimation('left')}>
         <motion.header {...slideAnimation('down')}>
           <Image src='/logo.png' width={100} height={100} alt='logo' />
         </motion.header>
         <motion.div className="home-content" {...headContainerAnimation}>
           <h1 className='head-text'>
-            LET'S FIND YOUR <br className='xl:bloxk hidden'/> NEXT HOME
+            LET'S FIND YOUR <br className='hidden'/> NEXT HOME
           </h1>
           </motion.div>
           <motion.div {...headContainerAnimation} className='flex flex-col gap-5'>
