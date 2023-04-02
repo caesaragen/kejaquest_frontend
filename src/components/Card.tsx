@@ -1,22 +1,31 @@
 import React from 'react'
 import Image from 'next/image'
 
-const Card: React.FC = () => {
+
+interface CardProps {
+  title: string;
+  description: string;
+  image: string;
+  location: string;
+  price: number;
+}
+const Card: React.FC<CardProps> = ({ title, description, image, location, price }) => {
   return (
     <div className="card bg-base-100 glassmorphism shadow-xl hover:transform hover:scale-105">
-    <figure> <Image src='/house.jpg' width={200} height={100} alt='featured-1' className='rounded w-full' /></figure>
-    <div className="card-body text-base text-slate-100">
+      <figure className='p-3 rounded-xl'> <Image src={image} width={100} height={50} alt='featured-1' className='rounded-xl w-full max-h-60' unoptimized/></figure>
+      <div className="card-body text-base text-slate-100">
         <h2 className="card-title">
-            One Bedroom Apartment
-            <div className="badge badge-secondary">NEW</div>
+          {title}
+          <div className="badge badge-secondary">NEW</div>
         </h2>
-        <p>These are new vacant apartments in your area</p>
+        <p>{description}</p>
         <div className="card-actions justify-end">
-            <div className="badge badge-outline">New</div>
-            <div className="badge badge-outline">Imara Daima</div>
+          <div className="badge badge-outline">Ksh {price}</div>
+          <div className="badge badge-outline">{location}</div>
         </div>
+        <div className="divider"></div> 
+      </div>
     </div>
-</div>
   )
 }
 
