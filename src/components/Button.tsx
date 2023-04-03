@@ -8,12 +8,14 @@ const Button: React.FC<{
     borderRadius: string
     icon?: JSX.Element
     bgHoverColor?: string
-}> = ({ bgColor, color, size, text, borderRadius, icon, bgHoverColor }) => {
+    onClick?: () => void
+}> = ({ bgColor, color, size, text, borderRadius, icon, bgHoverColor, onClick }) => {
   return (
     <button
       type='button'
       style={{ backgroundColor: bgColor, color: color, borderRadius: borderRadius }}
-      className={`text-${size} p-3 hover:drop-shadow-xl`}
+      className={`text-${size} p-3 hover:drop-shadow-${size} `}
+      onClick={onClick}
     >
       {text}
     </button>

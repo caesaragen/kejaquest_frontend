@@ -43,14 +43,13 @@ export default function Home() {
                     </div>
         <div className='fixed md:static bg-hero-pattern  bg-cover bg-center w-full'>
           <div className='w-full bg-[#272626] bg-opacity-75 '>
-          <Navbar />
+          {/* <Navbar /> */}
           <div className='flex flex-col justify-center items-center w-full'>
           <Hero />
           <Featured />
         </div>
           </div>
         </div>
-        {/* <Featured /> */}
         {themeSettings && <ThemeSettings />}
       </main>
     </>
