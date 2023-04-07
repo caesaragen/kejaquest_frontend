@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { FiSettings } from 'react-icons/fi';
 import { ContextProvider, useContextState } from '@/contexts/ContextProvider'
-import { ThemeSettings, Navbar, Hero, Featured } from '@/components';
+import { ThemeSettings, Navbar, Hero, Featured, Footer } from '@/components';
 import { Tooltip } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useSnapshot } from 'valtio';
@@ -51,6 +51,7 @@ export default function Home() {
           </div>
         </div>
         {themeSettings && <ThemeSettings />}
+        <Footer />
       </main>
     </>
   )

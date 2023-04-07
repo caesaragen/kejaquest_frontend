@@ -7,3 +7,5 @@ export {default as Featured} from './Featured';
 export {default as Card} from './Card';
 export {default as NavBar} from './NavBars';
 export {default as Logo} from './Logo';
+export {default as Footer} from './Footer';
+export {default as Layout} from './Layout';
