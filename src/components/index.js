@@ -5,3 +5,5 @@ export {default as ThemeSettings} from './ThemeSettings';
 export {default as Hero} from './Hero';
 export {default as Featured} from './Featured';
 export {default as Card} from './Card';
+export {default as NavBar} from './NavBars';
+export {default as Logo} from './Logo';

@@ -37,9 +37,11 @@ const Card: React.FC<CardProps> = ({ title, description, image, location, price,
             color="black"
             text="View"
             borderRadius="10px"
-            icon={<BiArrowToRight color='black'/>}
+            icon={<BiArrowToRight color='black' size={"lg"}/>}
             onClick={() => onClick({ id: 1, title, description, image, location, price, images })}
-            size='sm'
+            size='text-lg'
+            width='25%'
+            bgHoverColor='bg-gray-100'
             />
           <span>
             <div className="badge badge-outline">Ksh {price}</div>

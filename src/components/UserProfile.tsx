@@ -8,18 +8,20 @@ import avatar from '../data/avatar.jpg';
 import Image from 'next/image';
 
 const UserProfile: React.FC = () => {
-    const { currentColor } = useContextState();
+    const { currentColor, handleClick } = useContextState();
 
     return (
-        <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96">
+        <div className="nav-item absolute right-1 top-16 bg-white dark:bg-[#42464D] p-8 rounded-lg w-96 z-10">
             <div className="flex justify-between items-center">
                 <p className="font-semibold text-lg dark:text-gray-200">User Profile</p>
                 <Button
-                    icon={<MdOutlineCancel />}
+                    icon={<MdOutlineCancel/>}
                     color="rgb(153, 171, 180)"
                     bgHoverColor="light-gray"
-                    size="2xl"
                     borderRadius="50%"
+                    // width='2rem'
+                    size='text-lg'
+                    onClick={handleClick}
                 />
             </div>
             <div className="flex gap-5 items-center mt-6 border-color border-b-1 pb-6">
